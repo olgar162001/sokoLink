@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('otp_code')->nullable();          // for sellers login
             $table->timestamp('otp_expires_at')->nullable(); // expire OTP after X minutes
             $table->rememberToken();
+            $table->timestamp('deleted_at')->nullable();     // field for soft delete
             $table->timestamps();
         });
 
